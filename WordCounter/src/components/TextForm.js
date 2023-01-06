@@ -15,7 +15,7 @@ export default function TextForm(props)
                 // setText("You have clicked on 'Convert to Upper case'")
                 let newText = text.toUpperCase();
                 setText(newText)
-                props.showAlert("Converted to Uppercase!", "Success")
+                props.showAlert("Converted to Uppercase!", "success")
             }
 
         const handleLowercaseClick = () => 
@@ -24,7 +24,7 @@ export default function TextForm(props)
                 // setText("You have clicked on 'Convert to Lower case'")
                 let newText = text.toLowerCase();
                 setText(newText)
-                props.showAlert("Converted to Lowercase!", "Success")
+                props.showAlert("Converted to Lowercase!", "success")
                 
              }
 
@@ -32,7 +32,7 @@ export default function TextForm(props)
             let text = document.getElementById("myBox");
             text.select();
             navigator.clipboard.writeText(text.value);
-            props.showAlert("Text copied to clipboard!", "Success")
+            props.showAlert("Text copied to clipboard!", "success")
 
         }
 
@@ -43,7 +43,7 @@ export default function TextForm(props)
                 // then paragraph will be join by one space
 
             setText(newText.join(" ")) 
-            props.showAlert("Extra spaces removed!", "Success")
+            props.showAlert("Extra spaces removed!", "success")
         }
 
         const clearText = () =>
@@ -52,7 +52,7 @@ export default function TextForm(props)
                 //let newText = text.reset();
                 //text.clear()
                 setText("")
-                props.showAlert("Text area cleared!", "Success")
+                props.showAlert("Text area cleared!", "success")
             }
 
         const handleOnChange = (event) => 

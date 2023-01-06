@@ -7,7 +7,7 @@ export default function About() {
         backgroundColor: 'white'
     })
 
-    const [btnText,setBtnText] = useState("Enable dark mode")
+    const [btnText,setBtnText] = useState("Enable reading mode")
     const toggleStyle = () => {
           if (myStyle.color === '#042743')
             {
@@ -15,14 +15,14 @@ export default function About() {
                     color: 'white',
                     backgroundColor: '#042743'
                  })
-                 setBtnText("Enable Light mode")
+                 setBtnText("Disable reading mode")
             }
           else{
             setMyStyle({
                 color: '#042743',
                 backgroundColor: 'white'
              }) 
-             setBtnText("Enable Dark mode")
+             setBtnText("Enable reading mode")
           }
     }
 
