@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+// import './styles.css';
 
 export default function TextForm(props) 
     {
@@ -7,14 +7,7 @@ export default function TextForm(props)
         // setText("new text");  right way to chnage the state
         const [text, setText] = useState('');
        
-        // const check= () =>
-        //     {
-        //      if (text.length ===0)
-        //         {
-        //             <strong>Note: </strong> Please execute;
-        //         }   
-        //     }
-
+        
         const handleUppercaseClick = () => 
             {
                 console.log("Upper case was clicked");
@@ -41,7 +34,34 @@ export default function TextForm(props)
             props.showAlert("Text copied to clipboard!", "success")
 
         }
+        
+        
+        // const ItalicText = () => {
+        //     //return <p className="italic-text">{text1}</p>;
+        //     return <i>{text}</i>
+        //   };
 
+        // const handleItalic = () => 
+        //     {
+        //         console.log("Italic was clicked");
+
+        //         // setText("You have clicked on 'Convert to Lower case'")
+        //         //let newText= 
+        //         let newText = text.ItalicText()
+        //         setText(newText)
+        //         props.showAlert("Converted to Italics!", "success")
+                
+        //      }
+
+        // const handleBold = () => 
+        //     {
+        //         console.log("Bold was clicked");
+        //         // setText("You have clicked on 'Convert to Lower case'")
+        //         let newText = text.bold();
+        //         setText(newText)
+        //         props.showAlert("Converted to Bold!", "success")
+                
+        //      }
         // Remove extra spaces
         const handleExtraSpaces = () => {
                 // if a paraagraph has one or more than one spaces then it will split(remove) it and then form a array by help of split(/[]+/)
@@ -81,6 +101,8 @@ export default function TextForm(props)
                     <button disabled={text.length === 0} className="btn btn-primary m-2" onClick={handleLowercaseClick}> Convert to Lower case </button>
                     <button disabled={text.length === 0} className="btn btn-primary m-2" onClick={handleCopy}> Copy text </button>
                     <button disabled={text.length === 0} className="btn btn-primary m-2" onClick={handleExtraSpaces}> Remove Extra Spaces </button>
+                    {/* <button disabled={text.length === 0} className="btn btn-primary m-2" onClick={handleItalic}> Make Italic </button>
+                    <button disabled={text.length === 0} className="btn btn-primary m-2" onClick={handleBold}> Make Bold </button> */}
 
                     <button disabled={text.length === 0} className="btn btn-primary m-2" onClick={clearText}> Clear text area </button>
 
@@ -104,7 +126,7 @@ export default function TextForm(props)
                     
 
                     <h2> Preview</h2>
-                    <p> {text.length> 0 ? text: "Nothing to preview!!"} </p>
+                    <p> <i>{text.length> 0 ? text: "Nothing to preview!!"}</i> </p>
 
                 </div>
                 </>
