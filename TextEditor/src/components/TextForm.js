@@ -36,33 +36,7 @@ export default function TextForm(props)
         }
         
         
-        // const ItalicText = () => {
-        //     //return <p className="italic-text">{text1}</p>;
-        //     return <i>{text}</i>
-        //   };
-
-        // const handleItalic = () => 
-        //     {
-        //         console.log("Italic was clicked");
-
-        //         // setText("You have clicked on 'Convert to Lower case'")
-        //         //let newText= 
-        //         let newText = text.ItalicText()
-        //         setText(newText)
-        //         props.showAlert("Converted to Italics!", "success")
-                
-        //      }
-
-        // const handleBold = () => 
-        //     {
-        //         console.log("Bold was clicked");
-        //         // setText("You have clicked on 'Convert to Lower case'")
-        //         let newText = text.bold();
-        //         setText(newText)
-        //         props.showAlert("Converted to Bold!", "success")
-                
-        //      }
-        // Remove extra spaces
+      
         const handleExtraSpaces = () => {
                 // if a paraagraph has one or more than one spaces then it will split(remove) it and then form a array by help of split(/[]+/)
             let newText = text.split(/[ ]+/);
@@ -108,15 +82,9 @@ export default function TextForm(props)
 
                 </div>
                 <div className="container my-3" style= {{color: props.mode === 'dark' ? 'white': '#042743'}}>
-                   
-
-        {/* if (text.length ===0)
-            <strong>Note: </strong> Please enter text to activate Buttons. */}
-    
-    
-
-
-                    <h2> Your text summary </h2>
+                 
+                 
+                 <h2> Your text summary </h2>
                     {/* (/\s+/) is a regular expression used with split() for calculating words as per "spaces and new line" */}
                     <p> <i> {text.split(/\s+/).filter((element) => {return element.length !== 0}).length} words and {text.length} characters </i></p>
                     
